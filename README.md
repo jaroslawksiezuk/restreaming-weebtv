@@ -1,2 +1,3 @@
 # restreaming-weebtv
-Script posted on http://www.stream-recorder.pl
+Script posted at http://www.stream-recorder.pl
+Tested on linux
