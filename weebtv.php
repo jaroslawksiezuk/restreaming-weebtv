@@ -53,6 +53,7 @@ if(!$channel_number) {
 
 if(!isset($channels_list[$channel_number])) {
   echo "Channel not found  \n";
+  die();
 }
 
 $url = "http://weeb.tv/api/setPlayer";
