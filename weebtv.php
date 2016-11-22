@@ -29,8 +29,8 @@ $url = "http://weeb.tv/api/getChannelList";
 
 $data = http_build_query(
     array(
-        'login' => $login,
-        'pass' => $password
+        'username' => $login,
+        'userpassword' => $password
     )
 );
 
@@ -61,8 +61,8 @@ $data = http_build_query(
     array(
         'platform' => 'XBMC',
         'channel' => $channel_number,
-        'login' => $login,
-        'pass' => $password
+        'username' => $login,
+        'userpassword' => $password
     )
 );
 
