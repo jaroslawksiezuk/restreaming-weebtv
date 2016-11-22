@@ -71,6 +71,11 @@ $result = getCurl($url, $data);
 parse_str(urldecode($result), $params);
 
 $r = $params[10] . '/' . $params[11];
+
+if($quality) {
+  $r = $r . $quality;
+}
+
 $p = 'token';
 $s = $params[73];
 
