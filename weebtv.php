@@ -2,9 +2,9 @@
 
 $login = "";
 $password = "";
-$channel_number = ""; // channel number from list (cid) or empty
-$rtmp_out = "example.flv";       // file, rtmp URL or empty to watch in vlc
-$quality = "";        // quality HI or empty
+$channel_number = ""; // channel number from list (cid), channel name or empty
+$rtmp_out = "example1.flv"; // file, rtmp URL or empty to watch in vlc
+$quality = ""; // quality HI or empty
 
 function getCurl($url, $postdata) {
 
@@ -44,6 +44,9 @@ foreach(json_decode($channels) as $channel)
 {
    echo $channel->cid . " - " . $channel->channel_title . "\n";
    $channels_list[$channel->cid] = $channel->channel_title;
+   if($channel->channel_name == $channel_number){
+     $channel_number = $channel->cid;
+   }
 }
 
 if(!$channel_number) {
